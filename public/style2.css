@@ -78,3 +78,34 @@ textarea {
 #preview p {
 	margin: 4px;
 }
+
+/* Style from http://www.sanwebe.com/2013/01/40-css-buttons-from-codepen */
+#helpButton {
+   border: 0 none;
+   border-radius: 2px 2px 2px 2px;
+   color: #FFFFFF;
+   cursor: pointer;
+   display: inline-block;
+   font-family: Arial,sans-serif;
+   font-size: 12px;
+   font-weight: bold;
+   line-height: 20px;
+   margin-bottom: 0;
+   margin-top: 10px;
+   padding: 7px 10px;
+   text-transform: none;
+   transition: all 0.3s ease 0s;
+   -moz-transition: all 0.3s ease 0s;
+   -webkit-transition: all 0.3s ease 0s;
+   width: 10%;
+   text-align: center;
+   background: none repeat scroll 0 0 #E0645C;
+   color: #FFFFFF;
+   position:fixed;
+   right:0px;
+   top:0px;
+}
+
+#helpButton > a {
+   text-decoration: none;
+}
