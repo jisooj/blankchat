@@ -2,7 +2,7 @@
 
 (function() {
 	var socket = io();
-	console.log('hi');
+   // window.onload
 	$(document).ready(function() {
 		var divx = document.getElementById("container");
 
