@@ -1,0 +1,28 @@
+body {
+    background-color: #6D4C41;
+    color: white;
+}
+h1 {
+    text-align: center;
+}
+#container {
+    width: 80%;
+    margin: auto;
+}
+
+#container.div, #container.div.p {
+   text-align: center; 
+}
+
+#messages {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: #444;
+}
+
+#inputbox {
+    margin-top: 10px;
+    border: 5px inset white;
+    padding: 10px;
+    text-align: center;
+}

@@ -3,13 +3,12 @@
 (function() {
 	var socket = io();
 	console.log('hi');
-
 	$(document).ready(function() {
 		socket.emit('change room', $('body').attr('id'));
 		socket.on('message', function(msg) {
-			$('#messages').append($('<li>').text(msg));
+			$('#container').append($('<li>').text(msg));
+         MathJax.Hub.Queue(["Typeset",MathJax.Hub,"container"]);
 		});
-
 
 		$('button').click(function() {
 			socket.emit('message', {
