@@ -4,10 +4,15 @@
 	var socket = io();
 	console.log('hi');
 	$(document).ready(function() {
+		var divx = document.getElementById("container");
+
 		socket.emit('change room', $('body').attr('id'));
 		socket.on('message', function(msg) {
 			$('#container').append($('<div>').text(msg));
-        	MathJax.Hub.Queue(["Typeset",MathJax.Hub,"container"]);
+			divx.scrollTop = divx.scrollHeight;
+        	MathJax.Hub.Queue(["Typeset",MathJax.Hub,"container"], function() {
+        		divx.scrollTop = divx.scrollHeight;
+        	});
 		});
 
 		$('textarea').bind("submit", function() {
@@ -24,9 +29,5 @@
 				$(this).trigger("submit");
 			}
 		});
-
-		setInterval(function() {
-			$('#container').scrollTop($('#container')[0].scrollHeight);
-		}, 500);
 	});
 })();
