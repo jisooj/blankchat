@@ -10,41 +10,51 @@ body {
 	margin: 0px;
 	padding: 0px;
 	height: 100%;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: monospace;
 	font-size: 12pt;
 }
 
 #userinput {
-	position: realtive;
-	bottom: 0;
+	position: relative;
 	width: 80%;
-	height: 64px;
+	height: 96px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: blue;
 }
 
-input {
-	width: 90%;
+#header {
+	width: 80%;
+	text-align: center;
 	height: 64px;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: bold;
+	color: #6d4c41;
+	font-size: 24px;
+	padding: 16px;
 }
 
-#content {
+textarea {
+   resize: none;
+   width: 100%;
+   margin: 0px;
+   height: 96px;
+}
+
+#container {
 	width: 80%;
-	height: calc(100% - 64px);
+	height: calc(100% - 192px);
 	margin-left: auto;
 	margin-right: auto;
 	overflow-y: scroll;
-	background-color: #cccccc;
+	background-color: #f0f0f0;
 }
 
-#messages {
-	list-style-type: none; margin: 0; padding: 32;
+#container div {
+	border: 1px solid #cccccc;
+	border-radius: 8px;
+	margin: 16px;
+	padding: 8px;
+	background-color: #ffffff;
 }
-
-#messages li {
-	padding: 5px 10px;
-}
-
-#messages li:nth-child(odd) {
-	background: #eee; }

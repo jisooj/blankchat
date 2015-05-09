@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>hi</title>
+		<title>matalk</title>
 		<link href="/style2.css" type="text/css" rel="stylesheet" />
 		<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
 		<script src="/socket.io/socket.io.js"></script>
 		<script src="/index.js" type="text/javascript"></script>
 	</head>
 	
 	<body id="{{room_id}}">
-		<div id="content">
-			<ul id="messages"></ul>
-		</div>
+		<div id="header">matalk</div>
+		<div id="container"></div>
 		<div id="userinput">
-			<input id="m" autocomplete="off" /><button>Send</button>
+			<textarea></textarea>
 		</div>
 	</body>
 </html>

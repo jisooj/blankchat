@@ -7,9 +7,9 @@ router.get('/', function(req, res) {
 
 router.get('/chat/:room_id', function(req, res) {
 	console.log(req.params.room_id);
-	res.render('index', {
+	res.render('index2', {
 		room_id: req.params.room_id
 	});
-})
+});
 
 module.exports = router;
