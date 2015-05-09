@@ -20,5 +20,6 @@
           <button id="send">Send</button>
        </div>
        <p>`x = (-b +- sqrt(b^2-4ac))/(2a) .`</p>
+       <div id="preview"></div>
 	</body>
 </html>
