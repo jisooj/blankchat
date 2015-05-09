@@ -5,17 +5,16 @@
    var i = equations.length - 1;
 
 	window.onload = function() {
-      var sendButton = document.getElementById("send");
       document.getElementById("m").onkeyup = 
          (function(event){
             if(event.keyCode == 13){
                storeEquation();
-               sendButton.click();
                document.getElementById("preview").innerHTML = "";
             } else {
                moveIndex(event);
                makePreview();
             }
+            console.log("pressed");
          });
 	}
    
