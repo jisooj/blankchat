@@ -3,26 +3,22 @@
 (function() {
 	window.onload = function() {
       var sendButton = document.getElementById("send");
-		//sendButton.onclick = sendMessage;
       document.getElementById("m").onkeyup = 
          (function(event){
             if(event.keyCode == 13){
                sendButton.click();
+            } else {
+               makePreview();
             }
          });
 	}
    
-   /** unused now 
-	function sendMessage() {
-      var msg = document.getElementById("m");
-      var msgBubble = document.createElement("div");
+	function makePreview() {
+      var previewContainer = document.getElementById("preview");
       var content = document.createElement("p");
-      content.innerHTML = msg.value;
-      msgBubble.appendChild(content);
-
-      document.getElementById("container").appendChild(msgBubble);
-      msg.value = "";
+      content.innerHTML = document.getElementById("m").value;
+      previewContainer.innerHTML = "";
+      previewContainer.appendChild(content);
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub, "this will be new elmt"]);
 	}
-   */
-
 })();
