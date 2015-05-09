@@ -8,7 +8,7 @@
 
 		socket.emit('change room', $('body').attr('id'));
 		socket.on('message', function(msg) {
-			$('#container').append($('<div>').text(msg));
+			$('#container').append($('<div id="message">').text(msg));
 			divx.scrollTop = divx.scrollHeight;
         	MathJax.Hub.Queue(["Typeset",MathJax.Hub,"container"], function() {
         		divx.scrollTop = divx.scrollHeight;
