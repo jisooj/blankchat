@@ -22,13 +22,16 @@
 				"room_id": $('body').attr('id'),
 				"message_text": $('textarea').val()
 			});
+			//console.log($('textarea').val().replace(/(?:\r\n|\r|\n)/g, '<br />'));
 			$('textarea').val('');
 			return false;
 		});
 
-		$('textarea').keyup(function(e) {
+		$('textarea').keydown(function(e) {
 			if (e.keyCode == 13 && !e.shiftKey) {
 				$(this).trigger("submit");
+				$('textarea').val('');
+				return false;
 			}
 		});
 	});
