@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 12pt;
+}
+
+#userinput {
+	position: realtive;
+	bottom: 0;
+	width: 80%;
+	height: 64px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: blue;
+}
+
+input {
+	width: 90%;
+	height: 64px;
+}
+
+#content {
+	width: 80%;
+	height: calc(100% - 64px);
+	margin-left: auto;
+	margin-right: auto;
+	overflow-y: scroll;
+	background-color: #cccccc;
+}
+
+#messages {
+	list-style-type: none; margin: 0; padding: 0;
+}
+
+#messages li {
+	padding: 5px 10px;
+}
+
+#messages li:nth-child(odd) {
+	background: #eee; }
