@@ -63,6 +63,7 @@ textarea {
 	margin: 16px;
 	padding: 8px;
 	background-color: #ffffff;
+	white-space: pre;
 }
 
 #preview {
@@ -77,6 +78,7 @@ textarea {
 
 #preview p {
 	margin: 4px;
+	white-space: pre;
 }
 
 /* Style from http://www.sanwebe.com/2013/01/40-css-buttons-from-codepen */

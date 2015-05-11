@@ -8,7 +8,7 @@
 
 		socket.emit('change room', $('body').attr('id'));
 		socket.on('message', function(msg) {
-			$('#container').append($('<div id="message">').text(msg));
+			$('#container').append($('<div id="message">').text(decodeURI(msg)));
 			divx.scrollTop = divx.scrollHeight;
         	MathJax.Hub.Queue(["Typeset",MathJax.Hub,"container"], function() {
         		divx.scrollTop = divx.scrollHeight;
@@ -20,7 +20,7 @@
          document.getElementById("preview").innerHTML = "";
 			socket.emit('message', {
 				"room_id": $('body').attr('id'),
-				"message_text": $('textarea').val()
+				"message_text": encodeURI($('textarea').val())
 			});
 			//console.log($('textarea').val().replace(/(?:\r\n|\r|\n)/g, '<br />'));
 			$('textarea').val('');
