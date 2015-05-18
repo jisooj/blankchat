@@ -71,14 +71,11 @@ textarea {
 	top: 0px;
 	left: 0px;
 	background-color: #fff;
+	padding: 4px;
+	white-space: pre;
 	-webkit-box-shadow: 0px 0px 64px -8px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 64px -8px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 64px -8px rgba(0,0,0,0.75);
-}
-
-#preview p {
-	margin: 4px;
-	white-space: pre;
 }
 
 /* Style from http://www.sanwebe.com/2013/01/40-css-buttons-from-codepen */

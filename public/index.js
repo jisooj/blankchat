@@ -32,29 +32,37 @@
 				$(this).trigger("submit");
 				$('textarea').val('');
 				return false;
-			}
+			} else {
+        return moveIndex(e);
+      }
 		});
+
+    $('textarea').keyup(function(e) {
+        makePreview();
+    })
 	});
 
 	var equations = [];
    var i = equations.length - 1;
 
-	window.onload = function() {
-      document.getElementById("m").onkeyup = 
-         (function(event){
-            if(event.keyCode != 13){
-               moveIndex(event);
-               makePreview();
-            }
-         });
-	}
+	// window.onload = function() {
+ //      document.getElementById("m").onkeyup = 
+ //         (function(event){
+ //            if(event.keyCode != 13){
+ //               moveIndex(event);
+ //               makePreview();
+ //            }
+ //         });
+	// }
    
 	function makePreview() {
-      var previewContainer = document.getElementById("preview");
-      var content = document.createElement("p");
-      content.innerHTML = document.getElementById("m").value;
-      previewContainer.innerHTML = "";
-      previewContainer.appendChild(content);
+      // var previewContainer = document.getElementById("preview");
+      // var content = document.createElement("p");
+      // content.innerHTML = document.getElementById("m").value;
+      // previewContainer.innerHTML = "";
+      // previewContainer.appendChild(content);
+      $('#preview').empty();
+      $('#preview').text($('#m').val());
       MathJax.Hub.Queue(["Typeset", MathJax.Hub, "this will be new elmt"]);
 	}
 
@@ -67,20 +75,34 @@
     }
 
     function moveIndex(event) {
-       if (i < 0) {
-          return; 
-       }
+       // if (i < 0) {
+       //    return; 
+       // }
        if (event.keyCode == 38) { // up
-          i--;
-          if (i < 0) {
-             i = equations.length - 1;
+          // i--;
+          // if (i < 0) {
+          //    i = equations.length - 1;
+          // }
+          if (i != 0) {
+            i--;
           }
           document.getElementById("m").value = equations[i];
           //console.log(equations);
+          return false;
        } else if (event.keyCode == 40) { // down
-          i = (i + 1) % equations.length;
-          document.getElementById("m").value = equations[i];
+          //i = (i + 1) % equations.length;
+          if (i < equations.length - 1) {
+            i++;
+            $('#m').val(equations[i]);
+          } else {
+            i = equations.length;
+            $('#m').val('');
+          }
+          //document.getElementById("m").value = equations[i];
           //console.log(equations);
+          return false;
+       } else {
+          return true;
        }
    }
 })();
