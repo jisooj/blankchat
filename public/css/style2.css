@@ -12,16 +12,15 @@ body {
 	height: 100%;
 	font-family: monospace;
 	font-size: 12pt;
-	background-color: #6d4c41;
 }
 
 #userinput {
 	position: relative;
+   color: rgba(255,255,255,1);
 	width: 80%;
 	height: 96px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: blue;
 }
 
 #header {
@@ -51,7 +50,7 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	overflow-y: scroll;
-	background-color: #f0f0f0;
+	background-color: rgba(255,255,255,0.3);
 	-webkit-box-shadow: 0px 0px 64px -8px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 64px -8px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 64px -8px rgba(0,0,0,0.75);
@@ -63,10 +62,13 @@ textarea {
 	margin: 16px;
 	padding: 8px;
 	background-color: #ffffff;
+   color: rgba(0,0,0,1);
 	white-space: pre;
+   word-wrap: break-word;
 }
 
 #preview {
+   display: none;
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -78,37 +80,3 @@ textarea {
 	box-shadow: 0px 0px 64px -8px rgba(0,0,0,0.75);
 }
 
-/* Style from http://www.sanwebe.com/2013/01/40-css-buttons-from-codepen */
-#helpButton {
-   border: 0 none;
-   border-radius: 2px 2px 2px 2px;
-   color: #FFFFFF;
-   cursor: pointer;
-   display: inline-block;
-   font-family: Arial,sans-serif;
-   font-size: 12px;
-   font-weight: bold;
-   line-height: 20px;
-   margin-bottom: 0;
-   margin-top: 10px;
-   padding: 7px 10px;
-   text-transform: none;
-   transition: all 0.3s ease 0s;
-   -moz-transition: all 0.3s ease 0s;
-   -webkit-transition: all 0.3s ease 0s;
-   width: 10%;
-   text-align: center;
-   background: none repeat scroll 0 0 #E0645C;
-   color: #FFFFFF;
-   position:fixed;
-   right:8px;
-   top:0px;
-}
-
-#helpButton a {
-	color: #fff;
-}
-
-#helpButton > a {
-   text-decoration: none;
-}

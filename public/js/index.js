@@ -10,9 +10,6 @@
 		socket.on('message', function(msg) {
 			$('#container').append($('<div id="message">').text(decodeURI(msg)));
 			divx.scrollTop = divx.scrollHeight;
-        	MathJax.Hub.Queue(["Typeset",MathJax.Hub,"container"], function() {
-        		divx.scrollTop = divx.scrollHeight;
-        	});
 		});
 
 		$('textarea').bind("submit", function() {
@@ -37,34 +34,10 @@
       }
 		});
 
-    $('textarea').keyup(function(e) {
-        makePreview();
-    })
 	});
 
 	var equations = [];
    var i = equations.length - 1;
-
-	// window.onload = function() {
- //      document.getElementById("m").onkeyup = 
- //         (function(event){
- //            if(event.keyCode != 13){
- //               moveIndex(event);
- //               makePreview();
- //            }
- //         });
-	// }
-   
-	function makePreview() {
-      // var previewContainer = document.getElementById("preview");
-      // var content = document.createElement("p");
-      // content.innerHTML = document.getElementById("m").value;
-      // previewContainer.innerHTML = "";
-      // previewContainer.appendChild(content);
-      $('#preview').empty();
-      $('#preview').text($('#m').val());
-      MathJax.Hub.Queue(["Typeset", MathJax.Hub, "this will be new elmt"]);
-	}
 
     function storeEquation() {
        equations.push(document.getElementById("m").value);

@@ -12,21 +12,11 @@
                document.getElementById("preview").innerHTML = "";
             } else {
                moveIndex(event);
-               makePreview();
             }
             console.log("pressed");
          });
 	}
    
-	function makePreview() {
-      var previewContainer = document.getElementById("preview");
-      var content = document.createElement("p");
-      content.innerHTML = document.getElementById("m").value;
-      previewContainer.innerHTML = "";
-      previewContainer.appendChild(content);
-      MathJax.Hub.Queue(["Typeset", MathJax.Hub, "this will be new elmt"]);
-	}
-
    function storeEquation() {
       equations.push(document.getElementById("m").value);
       if (equations.length > 20) {
